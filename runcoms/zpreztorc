@@ -35,7 +35,13 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt'
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'osx' \
+  'ruby' \
+  'rails' \
+  'git' \
+  'prompt' \
 
 #
 # Autosuggestions
@@ -113,7 +119,31 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
+# zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'powerlevel10k'
+
+# powerlevel10k
+POWERLEVEL9K_MODE='nerdfont-complete'
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+
+# POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='\UE0C6'
+# POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='\UE0C7'
+
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%F{white}"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%F{white} "
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir_writable dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator rvm battery time)
+
+POWERLEVEL9K_STATUS_OK_BACKGROUND='004'
+POWERLEVEL9K_STATUS_OK_FOREGROUND='040'
+POWERLEVEL9K_RVM_BACKGROUND='005'
+
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)

@@ -11,3 +11,21 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+alias juno='cd ~/Decisely/juno'
+alias vim='nvim'
+alias vi='nvim'
+
+# RVM
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+
+# Enable History for Elixir
+export ERL_AFLAGS="-kernal shell_history enabled"
+PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
