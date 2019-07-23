@@ -38,6 +38,7 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'history-substring-search' \
   'osx' \
+  'elixir' \
   'ruby' \
   'rails' \
   'git' \
@@ -139,6 +140,9 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_VCS_GIT_GITHUB_ICON='\Uf09b '
+POWERLEVEL9K_VCS_GIT_ICON='\Uf09b '
+POWERLEVEL9K_VCS_GIT_BITBUCKET_ICON='\Uf171 '
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
