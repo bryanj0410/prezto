@@ -85,3 +85,11 @@ prompt_zsh_elixir_version() {
 		echo -n "$elixir_version \ue62d"
 	fi
 }
+
+prompt_zsh_phx_version() {
+  setopt +o nomatch
+  if [ -d ${pwd}deps/phoenix ]; then
+    local phx_version="$(mix phx.new --version)"
+    echo -n "${phx_version//Phoenix v} 🦅"
+  fi
+}
