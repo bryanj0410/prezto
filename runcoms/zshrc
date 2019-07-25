@@ -30,4 +30,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export ERL_AFLAGS="-kernal shell_history enabled"
 PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
-source "${HOME}/.zshfunctions
+source "${HOME}/.zshfunctions"
