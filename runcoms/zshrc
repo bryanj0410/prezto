@@ -78,6 +78,14 @@ prompt_zsh_battery_level() {
   echo -n "%{$color%}$symbol" ;
 }
 
+prompt_zsh_ruby_version() {
+  setopt +o nomatch
+  if ls -lah ${pwd}.ruby-version &>/dev/null; then
+    local ruby_version="$(rvm-prompt)"
+    echo -n "${ruby_version//ruby-} \ue21e "
+  fi
+}
+
 prompt_zsh_elixir_version() {
   setopt +o nomatch
 	if ls ${pwd}*.ex* &>/dev/null; then
