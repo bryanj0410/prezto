@@ -50,9 +50,17 @@ prompt_zsh_ruby_version() {
   setopt +o nomatch
   if ls -lah ${pwd}.ruby-version &>/dev/null; then
     local ruby_version="$(rvm-prompt)"
-    echo -n "${ruby_version//ruby-} \ue21e "
+    echo -n "${ruby_version//ruby-} %{%F{red}%}\ue739"
   fi
 }
+
+# prompt_zsh_rails_version() {
+#   setopt +o nomatch
+#   if ls ${pwd}Rakefile &>/dev/null; then
+#     local rails_version="$(rails -v)"
+#     echo -n "${rails_version//Rails} %{%F{red}%}\ue604 "
+#   fi
+# }
 
 prompt_zsh_elixir_version() {
   setopt +o nomatch
